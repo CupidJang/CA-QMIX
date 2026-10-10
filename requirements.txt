@@ -1,0 +1,12 @@
+# Install PyTorch for your platform first: https://pytorch.org/get-started/locally/
+# Tested with Python 3.10 and torch 2.7.1.
+numpy==1.26.4
+protobuf==3.20.3
+pysc2==4.0.0
+s2clientprotocol==5.0.16.97563.0
+pygame==2.6.1
+sacred==0.8.7
+pyyaml==6.0.3
+tensorboard-logger==0.1.0
+smac @ git+https://github.com/oxwhirl/smac.git@d6aab33f76abc3849c50463a8592a84f59a5ef84
+smacv2 @ git+https://github.com/oxwhirl/smacv2.git@577ab5a2cff2391f8df582da5731ea9cd6adf3c6
