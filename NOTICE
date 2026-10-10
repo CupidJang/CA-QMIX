@@ -1,0 +1,21 @@
+CA-QMIX
+Copyright 2026 Seungwoo Jang and Ji Hyun Nam
+
+This repository includes modified versions of the following projects.
+Files changed for CA-QMIX start with a "Modified for CA-QMIX" notice.
+
+di-engine/
+    DI-engine v0.5.3 (https://github.com/opendilab/DI-engine), Apache License 2.0 (di-engine/LICENSE).
+    Added for CA-QMIX: ding/model/template/{caqmix,qatten,qplex}.py,
+    ding/policy/{caqmix,episode_utils,qatten,qplex}.py, dizoo/smac2/, train.py.
+    The QPLEX and Qatten models are ported from PyMARL2 (Apache License 2.0).
+    The SMACv2 scenario settings in dizoo/smac2 follow SMACv2 (https://github.com/oxwhirl/smacv2, MIT License).
+
+pymarl/
+    PyMARL2 (https://github.com/hijkzzz/pymarl2, commit 8ccac7c), based on PyMARL
+    (https://github.com/oxwhirl/pymarl), Apache License 2.0 (pymarl/LICENSE).
+    Added for CA-QMIX: the CA-QMIX and CollaQ agents, controllers, learners and configs.
+
+Not included:
+    SMAC (https://github.com/oxwhirl/smac) and SMACv2 are installed from their repositories (MIT License).
+    StarCraft II is downloaded by install_sc2.sh under the Blizzard AI and Machine Learning License.
