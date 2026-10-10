@@ -1,0 +1,22 @@
+# Settings of the runs reported in the paper. main.py applies them on top of the algorithm config;
+# values given on the command line (with key=value) take precedence.
+
+# All algorithms: built-in AI difficulty per map (Easy = 2, Hard = 5, Super-Hard = 7).
+maps:
+  3s5z: {env_args: {difficulty: "2"}}
+  10m_vs_11m: {env_args: {difficulty: "5"}}
+  2c_vs_64zg: {env_args: {difficulty: "5"}}
+  MMM2: {env_args: {difficulty: "7"}}
+
+caqmix:
+  maps:
+    10m_vs_11m: {obs_last_action: False, env_args: {obs_last_action: False}}
+    MMM2: {obs_last_action: False, center_coop: True, env_args: {obs_last_action: False}}
+  # with ablation=<name>; replaces the map settings above
+  ablations:
+    alpha_none: {use_alpha: False, obs_last_action: False, env_args: {obs_last_action: False}}
+    binary_gate: {gate_variant: "binary", obs_last_action: False, env_args: {obs_last_action: False}}
+    delta_q_none: {lambda_delta_q: 0.0, obs_last_action: False, env_args: {obs_last_action: False}}
+    no_hard_mask: {gate_variant: "no_hard_mask", obs_last_action: False, env_args: {obs_last_action: False}}
+    no_vis_input: {gate_variant: "no_vis_input", obs_last_action: False, env_args: {obs_last_action: False}}
+    shuffled_vis: {gate_variant: "shuffled_vis", obs_last_action: False, env_args: {obs_last_action: False}}

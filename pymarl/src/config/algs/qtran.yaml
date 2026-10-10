@@ -1,0 +1,53 @@
+# --- QTRAN ---
+# Modified for CA-QMIX: original PyMARL training setup (RMSprop, 32-episode batches,
+# 5000-episode buffer, hard target update every 200 episodes), 8 parallel environments.
+action_selector: "epsilon_greedy"
+epsilon_start: 1.0
+epsilon_finish: 0.05
+epsilon_anneal_time: 50000
+
+runner: "parallel"
+batch_size_run: 8
+train_steps_per_cycle: 8  # one update per collected episode
+buffer_size: 5000
+batch_size: 32
+buffer_cpu_only: True
+
+optimizer: "rmsprop"
+lr: 0.0005
+optim_alpha: 0.99
+optim_eps: 0.00001
+gamma: 0.99
+grad_norm_clip: 10
+double_q: True
+target_update_interval: 200
+
+agent: "rnn"
+mac: "basic_mac"
+agent_output_type: "q"
+rnn_hidden_dim: 64
+obs_agent_id: True
+obs_last_action: False
+
+t_max: 2050000
+test_interval: 10000
+test_nepisode: 32
+test_greedy: True
+log_interval: 10000
+runner_log_interval: 10000
+learner_log_interval: 10000
+save_model: False
+use_tensorboard: False
+
+learner: "qtran_learner"
+mixer: "qtran_base"
+mixing_embed_dim: 64
+qtran_arch: "qtran_paper"
+opt_loss: 1
+nopt_min_loss: 0.1
+network_size: small
+
+env_args:
+  obs_last_action: False
+
+name: "qtran"
