@@ -3,6 +3,10 @@
 Code for **CA-QMIX** from *Context-Aware Cooperative Gating for Knowledge-Controlled Value Factorization in Multi-Agent Reinforcement Learning*, Seungwoo Jang and Ji Hyun Nam (IJSEKE, to appear).
 
 <p align="center">
+  <img src="assets/model.png" width="100%" alt="CA-QMIX architecture">
+</p>
+
+<p align="center">
   <img src="assets/smac_mmm2.gif" width="49%" alt="CA-QMIX on SMAC MMM2">
   <img src="assets/smacv2_protoss.gif" width="49%" alt="CA-QMIX on SMACv2 Protoss 10v10">
 </p>
